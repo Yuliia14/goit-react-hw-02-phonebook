@@ -1,0 +1,42 @@
+.form {
+  display: block;
+  margin-bottom: 30px;
+  padding: 0;
+}
+
+.text {
+  font-family: Roboto, sans-serif;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+}
+
+.label {
+  display: block;
+  composes: text;
+}
+
+.input {
+  margin: 10px;
+  margin-left: 30px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: blue;
+}
+
+.button {
+  display: inline-block;
+  margin-right: 5px;
+
+  padding: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 1px solid rgba(71, 71, 71, 0.13);
+  border-radius: 5px;
+  box-shadow: 0 0 3px rgba(40, 43, 40, 0.5);
+
+  text-align: center;
+  word-wrap: normal;
+  composes: text;
+}

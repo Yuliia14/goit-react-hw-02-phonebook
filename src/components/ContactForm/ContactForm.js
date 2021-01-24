@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import s from './ContactForm.module.css';
 
 export default class ContactsForm extends Component {
     state = {
         name: '',
         number: ''
       }
+
+    static propTypes = {
+        name: PropTypes.string.isRequired,
+        number: PropTypes.number.isRequired,
+    };
+
     handleChange = e => {
         const {name, value} = e.target;
         this.setState({
@@ -28,29 +36,31 @@ export default class ContactsForm extends Component {
         const {name, number} = this.state;
 
         return(
-            <form onSubmit={this.handleSubmit}>
-                <label>
+            <form className= {s.form} onSubmit={this.handleSubmit}>
+                <label className= {s.label}>
                 Name
                 <input
                     type="text"
                     placeholder="Enter name"
+                    className= {s.input}
                     name='name'
                     value={name}
                     onChange={this.handleChange}
                 />
                 </label>
-                <label>
+                <label className= {s.label}>
                 Number
                 <input
                     type="tel"
                     placeholder="Enter number"
+                    className= {s.input}
                     name='number'
                     value={number}
                     onChange={this.handleChange}
                 />
                 </label>
 
-                <button type="submit">Add contact {name}</button>
+                <button type="submit" className= {s.button}><span className={s.text}>Add contact {name}</span></button>
             </form>
         )        
     }
