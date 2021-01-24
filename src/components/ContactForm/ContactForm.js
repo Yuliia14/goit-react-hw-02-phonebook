@@ -37,30 +37,31 @@ export default class ContactsForm extends Component {
 
         return(
             <form className= {s.form} onSubmit={this.handleSubmit}>
-                <label className= {s.label}>
-                Name
-                <input
-                    type="text"
-                    placeholder="Enter name"
-                    className= {s.input}
-                    name='name'
-                    value={name}
-                    onChange={this.handleChange}
-                />
-                </label>
-                <label className= {s.label}>
-                Number
-                <input
-                    type="tel"
-                    placeholder="Enter number"
-                    className= {s.input}
-                    name='number'
-                    value={number}
-                    onChange={this.handleChange}
-                />
-                </label>
-
-                <button type="submit" className= {s.button}><span className={s.text}>Add contact {name}</span></button>
+                <div className= {s.formInputs}>
+                    <label className= {s.label}>
+                    Name
+                    <input
+                        type="text"
+                        placeholder="Enter name"
+                        className= {s.input}
+                        name='name'
+                        value={name}
+                        onChange={this.handleChange}
+                    />
+                    </label>
+                    <label className= {s.label}>
+                    Number
+                    <input
+                        type="tel"
+                        placeholder="Enter number"
+                        className= {s.input}
+                        name='number'
+                        value={number}
+                        onChange={this.handleChange}
+                    />
+                    </label>
+                </div>
+                <button type="submit" className= {s.button}><span className={s.span}>Add contact {name}</span></button>
             </form>
         )        
     }

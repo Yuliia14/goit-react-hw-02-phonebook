@@ -1,0 +1,25 @@
+.list {
+  margin-bottom: 30px;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.input {
+  margin: 10px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: blue;
+}
+.text {
+  font-family: Roboto, sans-serif;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+}

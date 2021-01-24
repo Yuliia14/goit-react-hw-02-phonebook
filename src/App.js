@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import './App.css';
+import s from './App.css';
 import ContactsList from './components/ContactsList/ContactsList';
 import ContactsForm from './components/ContactForm/ContactForm';
 import Filter from './components/Filter/Filter';
@@ -61,6 +61,7 @@ export default class App extends Component {
       <h1>Phonebook</h1>
       <ContactsForm onAddContact={this.addContact}/>
       <h2>Contacts</h2>
+      <p className={s.text}>Find contacts by name</p>
       <Filter filter={filter} onChangeFilter ={this.changeFilter}/>
       {contacts.length > 0 && (
         <ContactsList contacts={visibleContacts} onRemoveContact={this.removeContact}/>

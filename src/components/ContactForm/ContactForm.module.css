@@ -1,9 +1,12 @@
 .form {
-  display: block;
-  margin-bottom: 30px;
   padding: 0;
+  max-width: 200px;
 }
-
+.formInputs {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
 .text {
   font-family: Roboto, sans-serif;
   line-height: 1.17;
@@ -11,13 +14,14 @@
 }
 
 .label {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   composes: text;
 }
 
 .input {
   margin: 10px;
-  margin-left: 30px;
 }
 
 .input:focus {
@@ -26,12 +30,12 @@
 }
 
 .button {
-  display: inline-block;
-  margin-right: 5px;
+  display: block;
+  height: auto;
+  margin-top: 20px;
+  align-self: center;
 
-  padding: 0;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding: 5px 5px;
   border: 1px solid rgba(71, 71, 71, 0.13);
   border-radius: 5px;
   box-shadow: 0 0 3px rgba(40, 43, 40, 0.5);
@@ -39,4 +43,10 @@
   text-align: center;
   word-wrap: normal;
   composes: text;
+}
+
+.span {
+  composes: text;
+  font-weight: 700;
+  font-size: large;
 }
